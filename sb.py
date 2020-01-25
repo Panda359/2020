@@ -20,12 +20,8 @@ requests.packages.urllib3.disable_warnings()
 from ttypes import LoginRequest
 import json, requests, LineService
 from thrift.transport import THttpClient
-
 botStart = time.time()
-cl = LINE("ENaoOR7jsGlIhxfxBUUb.0PzLwS72Fl1EGGJMnIN3IW.7k4OIV4TbYJWJy52Z2RVtPMaOp+J47jcosfbrQ+QDUE=")
-#cl = LINE("YOUR TOKEN")
-#cl = LINE("Email","Password")
-
+cl = LINE()
 cl.log("Auth Token : " + str(cl.authToken))
 channelToken = cl.getChannelResult()
 cl.log("Channel Token : " + str(channelToken))
